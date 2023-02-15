@@ -18,8 +18,7 @@ def cadastrar_cliente():
                   'sobrenome': entry_sobrenome.get(),
                   'email': entry_email.get(),
                   'telefone': entry_telefone.get()
-              }
-              )
+              })
 
 
     # Commit as mudanças:
@@ -29,10 +28,10 @@ def cadastrar_cliente():
     conexao.close()
 
     # #Apaga os valores das caixas de entrada
-    entry_nome.delete(0,"end")
-    entry_sobrenome.delete(0,"end")
-    entry_email.delete(0,"end")
-    entry_telefone.delete(0,"end")
+    entry_nome.delete(0, "end")
+    entry_sobrenome.delete(0, "end")
+    entry_email.delete(0, "end")
+    entry_telefone.delete(0, "end")
 
 def exporta_clientes():
     conexao = sqlite3.connect('banco_clientes.db')
